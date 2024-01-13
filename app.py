@@ -51,15 +51,31 @@ def extract_skills(input_text):
     
     return found_skills
 
-def extract_skills_from_resume():
-    res_path = input('Enter Resume Path: ') 
-    resume_text = ''
-    if get_file_extension(res_path) == '.docx':
-        resume_text = extract_text_from_docx(res_path)
+def extract_skills_from_resume(text_path):
+    #text_path = input('Enter Resume Path: ') 
+    text = ''
+    if get_file_extension(text_path) == '.docx':
+        text = extract_text_from_docx(text_path)
 
-    elif get_file_extension(res_path) == '.pdf':
-        resume_text = extract_text_pdf(res_path)
-    skills = extract_skills(resume_text)
+    elif get_file_extension(text_path) == '.pdf':
+        text = extract_text_pdf(text_path)
+    skills = extract_skills(text)
     return skills
 
+def matchingSkills(res_path, job_desc): # job_desc is a string
+    matched = {} # set of matched jobs
+    res_skills = extract_skills_from_resume(res_path)
+    job_skills = extract_skills(job_desc)
+    for skill in job_skills:
+        if skill in res_skills:
+            matched.add(skill)
+    return matched
 
+def missingSkills(res_path, job_desc):
+    missing = {}
+    res_skills = extract_skills_from_resume(res_path)
+    job_skills = extract_skills(job_desc)
+    for skill in job_skills:
+        if skill not in res_skills:
+            missing.add(skill)
+    return missing
