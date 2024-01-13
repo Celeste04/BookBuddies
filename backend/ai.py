@@ -12,11 +12,13 @@ def run(model, inputs):
     return response_only
 
 # get string of skills from resume
-skill_list = app.extract_skills_from_resume()
 condensed = "my skills are "
-for item in skill_list :
-    condensed += item
-    condensed += " "
+
+def getfile(file) :
+    skill_list = app.extract_skills_from_resume()
+    for item in skill_list :
+        condensed += item
+        condensed += " "
 
 # interview questions
 inputs = [
