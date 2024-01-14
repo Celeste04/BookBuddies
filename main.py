@@ -7,7 +7,7 @@ from wtforms.validators import InputRequired
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'supersecretkey'
-app.config['UPLOAD_FOLDER'] = 'backend'
+app.config['UPLOAD_FOLDER'] = ''
 
 class UploadFileForm(FlaskForm):
     file = FileField("File", validators=[InputRequired()])
