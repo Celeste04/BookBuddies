@@ -28,14 +28,19 @@
                 </div>
                 <div>
                     <p>Job Posting Skill Match</p>
-                    <form action="/jobPosting" method="POST">
-                        <input type="text" name="jobRequirements" class="job-posting"></textarea>
+                    <form action="/process-form" method="POST">
+                        <input type="text" name="jobRequirements" class="job-posting" required></input>
                         <button>Submit</button>
                     </form>
                 </div>
             </div>
             <div class="chat-container">
-                chat
+                <h2>Set Elements:</h2>
+                <ul>
+                    {% for element in job_skills %}
+                        <li>{{ element }}</li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
     </div>

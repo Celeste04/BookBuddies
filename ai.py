@@ -1,9 +1,9 @@
 from flask import Flask, request, jsonify
 import requests
 import random
-import app
+import skills
 import requests
-import app
+import skills
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -21,10 +21,9 @@ def run(model, inputs):
     return response_only
 
 # get string of skills from resume
-@app.route("/get-question")
 def getQuestions() :
     condensed = "my skills are "
-    skill_list = app.extract_skills_from_resume() #get skill list
+    skill_list = skills.extract_skills_from_resume() #get skill list
     for item in skill_list :
         condensed += item
         condensed += " "
@@ -36,7 +35,7 @@ def getQuestions() :
     ]
 
     output = run("@cf/meta/llama-2-7b-chat-int8", inputs)
-    return jsonify(output)
+    return output
 
 @app.route("/get-input", methods=["POST"])
 def getFeedback() :
