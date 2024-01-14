@@ -109,6 +109,9 @@ p {
     border: solid;
     width: 360px;
     height: 180px;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid black;
 }
 
 .pink-inner {
@@ -120,10 +123,12 @@ p {
 }
 
 .your-skills-container {
-    border: solid 1px;
     width: 200px;
     height: 200px;
     background-color: #FFEFC9;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid black;
 }
 
 .required-skills-container {
@@ -131,6 +136,9 @@ p {
     width: 200px;
     height: 200px;
     background-color: #E0F0FB;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid black;
 }
 
 .job-input {
