@@ -48,6 +48,11 @@ p {
     margin-top: 10px;
 }
 
+.submit-btn:hover {
+    background-color: #cff4d1;
+    cursor: pointer;
+}
+
 .outer-container {
     display: flex;
     justify-content: center;
@@ -144,7 +149,6 @@ p {
 .job-input {
     width: 210px;
     height: 220px;
-    border-radius: 10px;
     border: solid;
     margin-left: 15px;
 }
@@ -152,6 +156,22 @@ p {
 .skills-title {
     text-align: center;
     font-weight: bold;
+}
+
+.missing-skills-title {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    width: 360px;
+    margin-left: 52px;
+}
+
+.job-posting-title {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    width: 210px;
+    margin-left: 15px;
 }
 
 .upload {
