@@ -77,7 +77,6 @@ def missing_skills(res_path, job_desc):
     for skill in job_skills:
         if skill not in res_skills:
             missing.add(skill)
-    print(missing)
     return missing
 
 def skillmatch(len_skills1, len_skills2):
