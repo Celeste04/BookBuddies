@@ -8,19 +8,19 @@ body {
     background-size: cover;
 }
 p {
-    color: white;
-    background-color: rgb(0,0,0,0.7);
-    
+    color: black; 
 }
+
 .top {
-    background-color: rgb(0,0,0,0.7);
+    background-color:white;
     display: flex;
-    color: white;
+    color: black;
 }
 
 .top h2 {
-    color: white;
+    color: black;
     padding-left: 20%;
+    padding-top: 15px;
 }
 
 .logo {
@@ -28,8 +28,12 @@ p {
 }
 
 .logo p {
-    padding-top: 5px;
+    padding-top: 25px;
     font-weight: bold;
+}
+
+.upload p {
+    color: white;
 }
 
 .btn-wrapper {
