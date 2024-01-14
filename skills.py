@@ -80,5 +80,5 @@ def missing_skills(res_path, job_desc):
     return missing
 
 def skillmatch(len_skills1, len_skills2):
-    return ( len_skills1 // len_skills2 ) * 100 if len_skills2 > 0 else 0
+    return round(( len_skills1 / len_skills2 ) * 100 if len_skills2 > 0 else 0)
 

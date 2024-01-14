@@ -127,6 +127,11 @@ p {
     background-color: #ffe9e9;
 }
 
+h3 {
+    margin-left: 40%;
+    font-size: 500px;
+}
+
 .your-skills-container {
     width: 200px;
     height: 200px;
@@ -279,9 +284,5 @@ p {
 	bottom: -15px;
 	color: gray;
 	font-size: 10px;
-}
-
-.ax {
-
 }
 
