@@ -3,6 +3,7 @@ from flask_wtf import FlaskForm
 from wtforms import FileField, SubmitField
 from werkzeug.utils import secure_filename
 import os
+import ai
 from wtforms.validators import InputRequired
 
 app = Flask(__name__)

@@ -21,10 +21,8 @@ def run(model, inputs):
     return response_only
 
 # get string of skills from resume
-@app.route("/get-question")
-def getQuestions() :
+def getQuestions(skill_list) :
     condensed = "my skills are "
-    skill_list = app.extract_skills_from_resume() #get skill list
     for item in skill_list :
         condensed += item
         condensed += " "
@@ -36,27 +34,21 @@ def getQuestions() :
     ]
 
     output = run("@cf/meta/llama-2-7b-chat-int8", inputs)
-    return jsonify(output)
+    output
 
-@app.route("/get-input", methods=["POST"])
-def getFeedback() :
-    user_input = request.get_json()
+def getFeedback(user_input) :
     answers = [ 
         { "role": "system", "content": "You are an assistant that provides constructive critism on the interview answers given and if they're good answers" },
         { "role": "user", "content": user_input}
     ]
 
     output = run("@cf/meta/llama-2-7b-chat-int8", answers)
-    return jsonify(output)
+    return output
 
-@app.route("/get-joke")
 def getJoke():
     joke = [ 
         { "role": "system", "content": "Tell a joke" },
     ]
 
     output = run("@cf/meta/llama-2-7b-chat-int8", joke)
-    return jsonify(output)
-
-if __name__ == "__main__" :
-    app.run(debug=True)
+    return output
