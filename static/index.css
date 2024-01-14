@@ -2,9 +2,24 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: pink;
+    background-color: #FDF2F2;
 }
-h1 {
-    font-size: 2rem;
-    color: blue;
+
+.top {
+    background-color: white;
+    display: flex;
+}
+
+.top h2 {
+    color: black;
+    padding-left: 20%;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo p {
+    padding-top: 5px;
+    font-weight: bold;
 }
