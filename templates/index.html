@@ -35,30 +35,39 @@
                         <p class="title">Job Posting Skill Match</p>
                         <form action="/process-form" method="POST">
                             <input type="text" name="jobRequirements" class="job-input" placeholder="Paste job posting here..."></input>
-                            <button type="submit">Submit</button>
+                            <div class="button-wrapper">
+                                <button class="submit-btn" type="submit">Submit</button>
+                            </div>
                         </form>
                     </div>
                 </div>
                 <div class="skill-middle">
                     <div>
-                        Your Skills
-                        <div classname="your-skills-container">
-                            hi
-                        </div>
+                        <p class="skills-title">Your Skills</p>
+                        <div class="your-skills-container">
+                            <ul>
+                                {% for element in job_skills %}
+                                    <li>{{ element }}</li>
+                                {% endfor %}
+                            </ul>
+                         </div>
                     </div>
                     <div>
-                        Wanted Skills
-                        <div classname="wanted-skills-container">hi</div>
+                        <p class="skills-title">Required Skills</p>
+                        <div class="required-skills-container"></div>
                     </div>
+                </div>
+                <div>
+                    <p class="skills-title">Missing Skills</p>
+                    <div class="skill-bottom">
+                        <div class="missing-skills">
+                    </div>
+                </div>
+
                 </div>
             </div>
             <div class="chat-container">
                 <h2>Chat</h2>
-                <ul>
-                    {% for element in job_skills %}
-                        <li>{{ element }}</li>
-                    {% endfor %}
-                </ul>
             </div>
         </div>
     </div>

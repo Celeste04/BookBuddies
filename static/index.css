@@ -24,6 +24,22 @@ body {
     font-weight: bold;
 }
 
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.submit-btn {
+    font-family: Poppins, sans-serif;
+    background-color: #e0fbe1;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
 .outer-container {
     display: flex;
     justify-content: center;
@@ -41,7 +57,7 @@ body {
     border: solid 2px;
     border-radius: 8px;
     width: 470px;
-    height: 700px;
+    height: 850px;
     background-color: white;
     grid-gap: 30px;
 }
@@ -49,12 +65,12 @@ body {
 .chat-container {
     border: solid 2px;
     border-radius: 8px;
-    height: 700px;
+    height: 850px;
     background-color: white;
 }
 
 .skill-match {
-    border: solid grey;
+    border: solid;
     width: 170px;
     height: 220px;
     margin-top: 60px;
@@ -73,6 +89,18 @@ body {
     justify-content: space-evenly;
 }
 
+.skill-bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.missing-skills {
+    background-color: #F7E0FB;
+    border: solid;
+    width: 360px;
+    height: 180px;
+}
+
 .pink-inner {
     width: 140px;
     height: 150px;
@@ -82,19 +110,30 @@ body {
 }
 
 .your-skills-container {
-    border: solid;
-
+    border: solid 1px;
+    width: 200px;
+    height: 200px;
+    background-color: #FFEFC9;
 }
 
-.wanted-skills-container {
-    border: solid;
+.required-skills-container {
+    border: solid 1px;
+    width: 200px;
+    height: 200px;
+    background-color: #E0F0FB;
 }
 
 .job-input {
     width: 210px;
     height: 220px;
     border-radius: 10px;
-    border: solid grey;
+    border: solid;
+    margin-left: 15px;
+}
+
+.skills-title {
+    text-align: center;
+    font-weight: bold;
 }
 
 .upload {
