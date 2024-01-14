@@ -32,8 +32,8 @@ p {
     font-weight: bold;
 }
 
-.upload p {
-    color: white;
+.upload {
+    padding-top: 20px;
 }
 
 .btn-wrapper {
