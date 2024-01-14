@@ -1,9 +1,9 @@
 from flask import Flask, request, jsonify
 import requests
 import random
-import app
+import skills
 import requests
-import app
+import skills
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -34,6 +34,7 @@ def getQuestions(skill_list) :
     ]
 
     output = run("@cf/meta/llama-2-7b-chat-int8", inputs)
+    return output
     output
 
 def getFeedback(user_input) :

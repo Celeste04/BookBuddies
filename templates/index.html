@@ -55,7 +55,12 @@
                 </div>
             </div>
             <div class="chat-container">
-                chat
+                <h2>Set Elements:</h2>
+                <ul>
+                    {% for element in job_skills %}
+                        <li>{{ element }}</li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
     </div>

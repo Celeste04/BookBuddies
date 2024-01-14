@@ -61,7 +61,7 @@ def extract_skills_from_resume(text_path):
     skills = extract_skills(text)
     return skills
 
-def matchingSkills(res_path, job_desc): # job_desc is a string
+def matching_skills(res_path, job_desc): # job_desc is a string
     matched = {} # set of matched jobs
     res_skills = extract_skills_from_resume(res_path)
     job_skills = extract_skills(job_desc)
@@ -70,7 +70,7 @@ def matchingSkills(res_path, job_desc): # job_desc is a string
             matched.add(skill)
     return matched
 
-def missingSkills(res_path, job_desc):
+def missing_skills(res_path, job_desc):
     missing = {}
     res_skills = extract_skills_from_resume(res_path)
     job_skills = extract_skills(job_desc)
@@ -80,5 +80,5 @@ def missingSkills(res_path, job_desc):
     return missing
 
 def skillmatch(skillset1, skillset2):
-    return ( skillset1.size() // skillset2.size() ) * 100
+    return ( len(skillset1) // len(skillset2) ) * 100 if len(skillset2) > 0 else 0
 
