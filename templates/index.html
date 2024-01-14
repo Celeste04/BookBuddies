@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <title>Mr. Axolotl</title>
 </head>
 <body>
-    <h1>Flask File Uploads Tutorial</h1>
-
+    <h1>Consult Mr. Axolotl - The World Renowned Recruiter</h1>
     <form method='POST' enctype='multipart/form-data'>
         {{form.hidden_tag()}}
         {{form.file()}}
