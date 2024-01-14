@@ -18,9 +18,9 @@
     <section class="top">
         <div class="logo">
             <img src="./static/images/axolotl.jpg" height="70px" width="70px">
-            <p>MR.AXOLOTL</p>
+            <p>MR. AXOLOTL</p>
         </div>
-        <h2>Consult Mr. Axolotl - The World Renowned Recruiter</h2>
+        <h2>Consult Mr. Axolotl - The Amazing Recruiter</h2>
     </section>
     <section class="upload">
         <p>Hone your interview skills and perfect your resume with Mr.Axolotl! <br> Upload your resume to get started.</p>
@@ -53,7 +53,7 @@
                         <p class="skills-title">Your Skills</p>
                         <div class="your-skills-container">
                             <ul>
-                                {% for element in job_skills %}
+                                {% for element in current_skills %}
                                     <li>{{ element }}</li>
                                 {% endfor %}
                             </ul>
@@ -61,19 +61,31 @@
                     </div>
                     <div>
                         <p class="skills-title">Required Skills</p>
-                        <div class="required-skills-container"></div>
+                        <div class="required-skills-container">
+                            <ul>
+                                {% for element in job_skills %}
+                                    <li>{{ element }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div>
                     <p class="skills-title">Missing Skills</p>
                     <div class="skill-bottom">
                         <div class="missing-skills">
+                            <ul>
+                                {% for element in missing_skills %}
+                                    <li>{{ element }}</li>
+                                {% endfor %}
+                            </ul>
                     </div>
                 </div>
 
                 </div>
             </div>
             <div class="chat-container">
+                <img class="ax" src="/static/images/axolotl.png" alt="axolotl">
                 <div class="card">
                     <div class="card-header msg_head">
                         <div class="d-flex bd-highlight">
