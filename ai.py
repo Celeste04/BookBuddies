@@ -1,8 +1,11 @@
 import requests
 import app
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 API_BASE_URL = "https://api.cloudflare.com/client/v4/accounts/d40839592c82f678e6a1eccbefc3e985/ai/run/"
-headers = {"Authorization": "Bearer 9IvrVFhROkcjUWWGdpG8TstRfEm09J0ANETqQrBY"}
+headers = {"Authorization": "Bearer "+os.getenv("API_KEY")}
 
 def run(model, inputs):
     input = { "messages": inputs }
@@ -36,4 +39,4 @@ answers = [
 ]
 
 output = run("@cf/meta/llama-2-7b-chat-int8", answers)
-print(output) 
+print(output)
