@@ -1,10 +1,8 @@
 import requests
 import app
-from dotenv import load_dotenv
-import os
-load_dotenv()
+
 API_BASE_URL = "https://api.cloudflare.com/client/v4/accounts/d40839592c82f678e6a1eccbefc3e985/ai/run/"
-headers = {"Authorization": "Bearer "+ os.getenv('API_KEY')}
+headers = {"Authorization": "Bearer 9IvrVFhROkcjUWWGdpG8TstRfEm09J0ANETqQrBY"}
 
 def run(model, inputs):
     input = { "messages": inputs }
