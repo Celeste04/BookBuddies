@@ -145,10 +145,14 @@ body {
     margin-left: 8px;
 }
 
+.chat-container {
+    width: 600px;
+}
 
 .card{
 	height: 100%;
 }
+
 .contacts_body{
 	overflow-y: auto;
 	white-space: nowrap;
@@ -200,6 +204,7 @@ body {
 	margin-bottom: auto;
 	margin-left: 10px;
 	border-radius: 25px;
+    max-width: 100%;
 	background-color :#F6AEAE;
 	padding: 10px;
 	position: relative;
@@ -217,6 +222,14 @@ body {
 .msg_time{
 	position: absolute;
 	left: 0;
+	bottom: -15px;
+	color: gray;
+	font-size: 10px;
+}
+
+.msg_time_send{
+	position: absolute;
+	right:0;
 	bottom: -15px;
 	color: gray;
 	font-size: 10px;
