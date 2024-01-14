@@ -36,11 +36,12 @@
             <div class="skill-container">
                 <div class="skill-top">
                     <div class="skill-match">
-                        <div class="pink-inner"></div>
+                        <div class="pink-inner">
+                        </div>
                     </div>
                     <div>
                         <p class="title">Job Posting Skill Match</p>
-                        <form action="/process-form" method="POST">
+                        <form action="/process-form" method="POST" id="myForm">
                             <input type="text" name="jobRequirements" class="job-input" placeholder="Paste job posting here..."></input>
                             <div class="button-wrapper">
                                 <button class="submit-btn" type="submit">Submit</button>
@@ -53,7 +54,7 @@
                         <p class="skills-title">Your Skills</p>
                         <div class="your-skills-container">
                             <ul>
-                                {% for element in job_skills %}
+                                {% for element in current_skills %}
                                     <li>{{ element }}</li>
                                 {% endfor %}
                             </ul>
@@ -61,13 +62,24 @@
                     </div>
                     <div>
                         <p class="skills-title">Required Skills</p>
-                        <div class="required-skills-container"></div>
+                        <div class="required-skills-container">
+                            <ul>
+                                {% for element in job_skills %}
+                                    <li>{{ element }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div>
                     <p class="skills-title">Missing Skills</p>
                     <div class="skill-bottom">
                         <div class="missing-skills">
+                            <ul>
+                                {% for element in missing_skills %}
+                                    <li>{{ element }}</li>
+                                {% endfor %}
+                            </ul>
                     </div>
                 </div>
 

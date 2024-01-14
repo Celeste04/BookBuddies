@@ -48,7 +48,7 @@ def process_form():
         job_desc = request.form['jobRequirements']
         job_skills = skills.extract_skills(job_desc)
         missing_skills = skills.missing_skills(file_path, job_desc)
-        matched_skills = str(len(skills.matching_skills(file_path, job_desc)), len(job_skills))
+        matched_skills = str(skills.skillmatch(len(skills.matching_skills(file_path, job_desc)), len(job_skills)))
     return render_template('index.html', form=form, job_skills=job_skills, missing_skills=missing_skills, matched_skills=matched_skills)
 
 @app.route("/get", methods=["GET", "POST"])

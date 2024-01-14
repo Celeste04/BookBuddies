@@ -62,7 +62,7 @@ def extract_skills_from_resume(text_path):
     return skills
 
 def matching_skills(res_path, job_desc): # job_desc is a string
-    matched = {} # set of matched jobs
+    matched = set()# set of matched jobs
     res_skills = extract_skills_from_resume(res_path)
     job_skills = extract_skills(job_desc)
     for skill in job_skills:
@@ -71,14 +71,15 @@ def matching_skills(res_path, job_desc): # job_desc is a string
     return matched
 
 def missing_skills(res_path, job_desc):
-    missing = {}
+    missing = set()
     res_skills = extract_skills_from_resume(res_path)
     job_skills = extract_skills(job_desc)
     for skill in job_skills:
         if skill not in res_skills:
             missing.add(skill)
+    print(missing)
     return missing
 
 def skillmatch(len_skills1, len_skills2):
-    return ( len_skills2 // len_skills2 ) * 100 if len(skillset2) > 0 else 0
+    return ( len_skills1 // len_skills2 ) * 100 if len_skills2 > 0 else 0
 
