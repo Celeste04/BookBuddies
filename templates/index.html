@@ -20,5 +20,24 @@
         {{form.file()}}
         {{form.submit()}}
     </form>
+    <div class="outer-container">
+        <div class="middle-container">
+            <div class="skill-container">
+                <div>
+                    skill match
+                </div>
+                <div>
+                    <p>Job Posting Skill Match</p>
+                    <form action="/jobPosting" method="POST">
+                        <input type="text" name="jobRequirements" class="job-posting"></textarea>
+                        <button>Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="chat-container">
+                chat
+            </div>
+        </div>
+    </div>
 </body>
 </html>

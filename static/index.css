@@ -23,3 +23,32 @@ body {
     padding-top: 5px;
     font-weight: bold;
 }
+
+.outer-container {
+    display: flex;
+    justify-content: center;
+}
+
+.middle-container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    grid-gap: 35px;
+}
+
+.skill-container {
+    border: solid 2px;
+    border-radius: 8px;
+    width: 450px;
+    height: 500px;
+}
+
+.chat-container {
+    border: solid 2px;
+    border-radius: 8px;
+    height: 500px;
+}
+
+.job-posting {
+    
+}
