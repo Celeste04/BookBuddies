@@ -146,6 +146,81 @@ body {
 }
 
 
+.card{
+	height: 100%;
+}
+.contacts_body{
+	overflow-y: auto;
+	white-space: nowrap;
+}
+.msg_card_body{
+	overflow-y: auto;
+}
+.container{
+	align-content: center;
+}
+
+.user_img{
+	height: 50px;
+	width: 50px;
+}
+
+.user_img_msg{
+	height: 40px;
+	width: 40px;
+	border:1.5px solid #f5f6fa;
+}
+
+.img_cont{
+	position: relative;
+	height: 70px;
+	width: 70px;
+}
+.img_cont_msg{
+	height: 40px;
+	width: 40px;
+}
+
+.user_info{
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: 15px;
+}
+.user_info span{
+	font-size: 20px;
+	color: black;
+}
+
+.user_info p{
+	font-size: 10px;
+}
+
+.msg_cotainer{
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: 10px;
+	border-radius: 25px;
+	background-color :#F6AEAE;
+	padding: 10px;
+	position: relative;
+}
+
+.msg_cotainer_send{
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-right: 10px;
+	border-radius: 25px;
+	background-color: rgb(186, 222, 255);
+	padding: 10px;
+	position: relative;
+}
+.msg_time{
+	position: absolute;
+	left: 0;
+	bottom: -15px;
+	color: gray;
+	font-size: 10px;
+}
 
 
 

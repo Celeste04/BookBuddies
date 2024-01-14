@@ -2,8 +2,6 @@ from flask import Flask, request, jsonify
 import requests
 import random
 import skills
-import requests
-import skills
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -29,17 +27,16 @@ def getQuestions(skill_list) :
 
     # interview questions
     inputs = [
-        { "role": "system", "content": "You are an assistant that helps provide interview questions" },
+        { "role": "system", "content": "You are an assistant that helps provide interview questions with max 200 words" },
         { "role": "user", "content": condensed}
     ]
 
     output = run("@cf/meta/llama-2-7b-chat-int8", inputs)
     return output
-    output
 
 def getFeedback(user_input) :
     answers = [ 
-        { "role": "system", "content": "You are an assistant that provides constructive critism on the interview answers given and if they're good answers" },
+        { "role": "system", "content": "You are an assistant that provides constructive critism on the interview answers given and if they're good answers with max 200 words" },
         { "role": "user", "content": user_input}
     ]
 

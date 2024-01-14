@@ -5,8 +5,8 @@ from werkzeug.utils import secure_filename
 import os
 import ai
 from wtforms.validators import InputRequired
-import ai
 import skills
+import random
 
 # vars
 UPLOAD_DIR = './uploads'
@@ -53,12 +53,22 @@ def process_form():
 
 @app.route("/get", methods=["GET", "POST"])
 def chat():
-    msg = request.form["msg"]
+    msg = request.form["msg"] #gets message from html
     input = msg
-    return ai.get_Chat_response(input)
+    return get_chat_response(input)
 
-def get_Chat_response(text):
-    ai.getQuestions()
+count = 0
+random = random.randint(3,5)
+def get_chat_response(text): #what the chatbot will do
+    global count, random, answer
+    if count != random :
+        answer = ai.getFeedback(text)
+        count += 1
+    else :
+        count = 0
+        random = random.randint(3,5)
+        answer = ai.getJoke()
+    return jsonify(answer)
 
 if __name__ == '__main__':
     app.run(debug=True)
