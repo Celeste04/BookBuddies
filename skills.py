@@ -42,11 +42,11 @@ def extract_skills(input_text):
 
     for token in filtered_tokens:
         if token.lower() in skill_set:
-            found_skills.add(token)
+            found_skills.add(token.lower())
     
     for ngram in bigrams_trigrams:
         if ngram.lower() in skill_set:
-            found_skills.add(ngram)
+            found_skills.add(ngram.lower())
     
     return found_skills
 
