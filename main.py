@@ -60,9 +60,16 @@ def chat():
 
 count = 0
 random = random.randint(3,5)
+first = True
 def get_chat_response(text): #what the chatbot will do
-    global count, random, answer
-    if count != random :
+    global count, random, answer, first
+    if first :
+        file_path = session.get('file_path')
+        skill_list = skills.extract_skills_from_resume(file_path)
+        answer = ai.getQuestions(skill_list)
+        count += 1
+        first = False
+    elif count != random :
         answer = ai.getFeedback(text)
         count += 1
     else :

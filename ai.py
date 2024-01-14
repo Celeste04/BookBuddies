@@ -27,7 +27,7 @@ def getQuestions(skill_list) :
 
     # interview questions
     inputs = [
-        { "role": "system", "content": "You are an assistant that helps provide interview questions with max 200 words" },
+        { "role": "system", "content": "You are an assistant that helps provide interview questions and small talk with max response of 200 words" },
         { "role": "user", "content": condensed}
     ]
 
@@ -36,7 +36,7 @@ def getQuestions(skill_list) :
 
 def getFeedback(user_input) :
     answers = [ 
-        { "role": "system", "content": "You are an assistant that provides constructive critism on the interview answers given and if they're good answers with max 200 words" },
+        { "role": "system", "content": "You are an assistant that provides constructive critism on the interview answers given and does small talk with max 200 words" },
         { "role": "user", "content": user_input}
     ]
 
