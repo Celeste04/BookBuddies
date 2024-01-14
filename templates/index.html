@@ -15,11 +15,15 @@
         </div>
         <h2>Consult Mr. Axolotl - The World Renowned Recruiter</h2>
     </section>
-    <form method='POST' enctype='multipart/form-data'>
-        {{form.hidden_tag()}}
-        {{form.file()}}
-        {{form.submit()}}
-    </form>
+    <section class="upload">
+        <p>Hone your interview skills and perfect your resume with Mr.Axolotl! <br> Upload your resume to get started.</p>
+        <img src="./static/images/upload.png" height="50px" width="40px">
+        <form method='POST' enctype='multipart/form-data'>
+            {{form.hidden_tag()}}
+            {{form.file()}}
+            {{form.submit()}}
+        </form>
+    </section>
     <div class="outer-container">
         <div class="middle-container">
             <div class="skill-container">
@@ -30,8 +34,23 @@
                     <p>Job Posting Skill Match</p>
                     <form action="/process-form" method="POST">
                         <input type="text" name="jobRequirements" class="job-posting" required></input>
-                        <button>Submit</button>
                     </form>
+                        <button>Submit</button>
+                    </div>
+    
+                </div>
+                <div class="skill-middle">
+                    <div>
+                        Your Skills
+                        <div classname="your-skills-container">
+                            hi
+                        </div>
+                    </div>
+                    <div>
+                        Wanted Skills
+                        <div classname="wanted-skills-container">hi</div>
+
+                    </div>
                 </div>
             </div>
             <div class="chat-container">
