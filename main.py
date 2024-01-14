@@ -41,11 +41,14 @@ def home():
 
 @app.route('/process-form', methods=['POST'])
 def process_form():
+    form=UploadFileForm()
     job_skills=''
+    print("yo")
     if request.method == 'POST':
         job_desc = request.form['jobRequirements']
         job_skills = skills.extract_skills(job_desc)
-    return render_template('index.html', job_skills=job_skills)
+    print("hi:",job_skills)
+    return render_template('index.html', form=form, job_skills=job_skills)
 
 @app.route("/get", methods=["GET", "POST"])
 def chat():

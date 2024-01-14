@@ -34,11 +34,10 @@
                     <div>
                         <p class="title">Job Posting Skill Match</p>
                         <form action="/process-form" method="POST">
-                            <input type="text" name="jobRequirements" class="job-input" placeholder="Paste job posting here..."></textarea>
+                            <input type="text" name="jobRequirements" class="job-input" placeholder="Paste job posting here..."></input>
                         </form>
                         <button>Submit</button>
                     </div>
-    
                 </div>
                 <div class="skill-middle">
                     <div>
@@ -50,12 +49,11 @@
                     <div>
                         Wanted Skills
                         <div classname="wanted-skills-container">hi</div>
-
                     </div>
                 </div>
             </div>
             <div class="chat-container">
-                <h2>Set Elements:</h2>
+                <h2>Chat</h2>
                 <ul>
                     {% for element in job_skills %}
                         <li>{{ element }}</li>
@@ -66,3 +64,4 @@
     </div>
 </body>
 </html>
+
