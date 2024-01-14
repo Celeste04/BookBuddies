@@ -127,6 +127,13 @@ p {
     background-color: #ffe9e9;
 }
 
+.matched-value {
+    margin-right: 20px;
+    font-size: 30px;
+    margin-left: 38px;
+    margin-top: 46px;
+}
+
 h3 {
     margin-left: 40%;
     font-size: 500px;
