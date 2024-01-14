@@ -79,6 +79,6 @@ def missing_skills(res_path, job_desc):
             missing.add(skill)
     return missing
 
-def skillmatch(skillset1, skillset2):
-    return ( len(skillset1) // len(skillset2) ) * 100 if len(skillset2) > 0 else 0
+def skillmatch(len_skills1, len_skills2):
+    return ( len_skills2 // len_skills2 ) * 100 if len(skillset2) > 0 else 0
 
