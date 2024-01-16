@@ -1,5 +1,5 @@
 # Mr. Axolotl
-SheHacks+ 2024 Project
+SheHacks+ 8 Project
 ## Inspiration
 All of us are students, and we've all felt the pain of going through job searches. Not only do we need to scour for jobs, but we also need to filter for suitable jobs that meet our skill sets. Additionally, based on our experiences and the advice from recruiters we've spoken to, a common trait that separates the successful students from the rest is that they are able to sell themselves and their abilities to the interviewer. The ability to do so is a valuable skill, and just like any other skill, it is one that can be learned. And the best way to learn is to practice. This inspired the idea of Mr. Axolotl
 ## What it does
